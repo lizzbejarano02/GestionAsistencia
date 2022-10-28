@@ -161,6 +161,26 @@ section .color:nth-child(4){
 
 
 }
+.form .inputBox select{
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    box-shadow: 0 25px 45 px rgba(0,0,0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: o 6px 16px rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+
+}
 div{
     text-align: center;
 }
