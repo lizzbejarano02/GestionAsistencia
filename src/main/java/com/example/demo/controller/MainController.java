@@ -13,7 +13,7 @@ public class MainController {
 
     private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/static/img/s.png";
 
-    @GetMapping("/hola")
+    @GetMapping("/qrg")
     public String getQRCode(Model model){
         String medium="https://rahul26021999.medium.com/";
         String github="http://192.168.0.7:8080/formulario/new";
