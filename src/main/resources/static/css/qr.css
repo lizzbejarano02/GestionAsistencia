@@ -22,15 +22,16 @@ body{
 }
 .c img{
 	
-	width: 350px;
-	height: 350px;
+	width: 300px;
+	height: 300px;
+	border: 10px solid #f88c34 ;
 	
 }
 .user img{
 	margin-bottom: -15px;
 	width: 120px;
 	height: 120px;
-
+	
 }
 .qr {
 border-bottom: 3px solid #f88c34 ;
