@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/dashboard2.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<title>Crear Usuario</title>
+</head>
+<body>
+ 	<input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="logo">
+      	<img  src="../img/LogoGrandeBlanco.png"  alt="logosena">
+     </div>
+      <div class="right_area">
+        <a th:href="@{/cerrar}" class="logout_btn btn btn-primary"><i class="fas fa-sign-out-alt"></i>Salir</a>
+      </div>
+    </header>
+    <!--header area end-->
+    <!--mobile navigation bar start-->
+    <div class="mobile_nav">
+      <div class="nav_bar">
+        <img  src="../img/user.png" class="mobile_profile_image" alt="">
+        <i class="fa fa-bars nav_btn"></i>
+      </div>
+      <div class="mobile_nav_items">
+        <a href="#"><i class="fas fa-cogs"></i><span>Cuenta</span></a>
+        <a th:href="@{/admin/listar}"><i class="fas fa-users"></i><span>Usuarios</span></a>
+        <a th:href="@{/aprendiz/listar}"><i class="fas fa-user-graduate"></i><span>Aprendices</span></a>
+        <a th:href="@{/formulario/listar}"><i class="fas fa-clipboard-list"></i><span>Asistencia</span></a>
+      </div>
+    </div>
+    <!--mobile navigation bar end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+      <div class="profile_info" >
+        <img src="../img/user.png" class="profile_image" alt="">
+        <h4>Admin</h4>
+      </div>
+      	<a href="#"><i class="fas fa-cogs"></i><span>Cuenta</span></a>
+        <a th:href="@{/admin/listar}"><i class="fas fa-users"></i><span>Usuarios</span></a>
+        <a th:href="@{/aprendiz/listar}"><i class="fas fa-user-graduate"></i><span>Aprendices</span></a>
+        <a th:href="@{/formulario/listar}"><i class="fas fa-clipboard-list"></i><span>Asistencia</span></a>
+    </div>
+    <!--sidebar end-->
+    <div class="content">
+      <div class="card">
+        
+        <section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="containers">
+        <div class="tittle">Registro de usuario</Ri:a></div>
+          <form th:action="@{/admin/save}" th:object="${usuario}" method="POST" enctype="multipart/form-data">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">ID</span>
+                    <input th:field="*{id} " type="number" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input  th:field="*{nombre} " type="text" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Apellido</span>
+                    <input th:field="*{apellido} " type="text" placeholder="Ingresa tu apellido" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Correo</span>
+                    <input th:field="*{correo} " type="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contraseña</span>
+                    <input th:field="*{pass} " type="text" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Tipo</span>
+                    <select class="area" th:field="*{tipo} " type="text" required>
+                        <option value="ADMIN">ADMIN</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Imagen</span>
+                    <input type="file" class="form-control-file" id="img" name="img" style="display:none;">
+                     <label for="img">click para subir una imagen</label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Guardar">
+            </div>
+        </form>
+    </div>
+</section>
+
+		
+      </div>
+      
+      <div class="card">
+       
+      </div>
+    </div>
+</body>
+</html>
